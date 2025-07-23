@@ -435,8 +435,8 @@ header {
   background: white;
   color: black;
   border: 1px solid rgb(192, 192, 192);
-  width: 0;
-  height: 45px;
+  width: 65px;
+  height: 65px;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -1387,5 +1387,366 @@ header {
   .info-value {
     text-align: left;
     margin-left: 0;
+  }
+}
+
+/* Schedule Page Styles */
+.schedule-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 100%;
+}
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-title h1 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.875rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.schedule-subtitle {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.schedule-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.schedule-nav-btn {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: rgb(192, 192, 192);
+  border-radius: 8px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.schedule-nav-btn:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.schedule-view-btn {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.schedule-view-btn.active {
+  background: #111827;
+  border-color: #111827;
+  color: white;
+}
+
+.schedule-view-btn:hover:not(.active) {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.weekly-calendar {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 80px repeat(7, 1fr);
+  gap: 1px;
+  overflow-x: auto;
+}
+
+.time-column {
+  display: grid;
+  grid-template-rows: 60px repeat(10, 60px);
+  gap: 1px;
+}
+
+.time-header {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.time-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.day-column {
+  display: grid;
+  grid-template-rows: 60px repeat(10, 60px);
+  gap: 1px;
+  position: relative;
+}
+
+.day-column.weekend {
+  background: #fafbfc;
+}
+
+.day-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: transparent;
+}
+
+.day-name {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.day-date {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-top: 0.25rem;
+}
+
+.schedule-event {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin: 2px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.schedule-event:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.schedule-event:nth-child(even) {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.schedule-event:nth-child(3n) {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.event-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.event-title {
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.event-location,
+.event-time {
+  font-size: 0.625rem;
+  opacity: 0.9;
+  line-height: 1.2;
+}
+
+.upcoming-events {
+  width: 100%;
+}
+
+.upcoming-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.upcoming-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #fafbfc;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+}
+
+.upcoming-item:hover {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+.upcoming-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem;
+  min-width: 60px;
+  text-align: center;
+}
+
+.date-day {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1;
+}
+
+.date-month {
+  font-size: 0.625rem;
+  color: #6b7280;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.upcoming-content {
+  flex: 1;
+}
+
+.upcoming-content h5 {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.upcoming-time,
+.upcoming-location {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.upcoming-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.upcoming-status.exam {
+  background: #fecaca;
+  color: #dc2626;
+}
+
+.upcoming-status.presentation {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.upcoming-status.assignment {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+/* Responsive Design for Schedule */
+@media (max-width: 1200px) {
+  .weekly-calendar {
+    grid-template-columns: 70px repeat(7, minmax(100px, 1fr));
+  }
+  
+  .event-title {
+    font-size: 0.7rem;
+  }
+  
+  .event-location,
+  .event-time {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .schedule-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .weekly-calendar {
+    grid-template-columns: 60px repeat(7, minmax(80px, 1fr));
+    font-size: 0.75rem;
+  }
+  
+  .upcoming-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .upcoming-date {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .weekly-calendar {
+    grid-template-columns: 50px repeat(7, minmax(70px, 1fr));
+    padding: 1rem;
+  }
+  
+  .schedule-event {
+    padding: 0.5rem;
+  }
+  
+  .event-title {
+    font-size: 0.625rem;
+  }
+  
+  .event-location,
+  .event-time {
+    font-size: 0.5rem;
+  }
+  
+  .day-date {
+    font-size: 1rem;
+  }
+  
+  .day-name {
+    font-size: 0.625rem;
+  }
+  
+  .time-slot {
+    font-size: 0.625rem;
   }
 }

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule - UpGradely</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css"
+    >
+    <link rel="stylesheet" href="../Assets/styles.css" />
+  </head>
+  <body>
+    <div class="dashboard container-fluid">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h3 class="logo">UpGradely</h3>
+        <nav>
+          <!-- Main Navigation -->
+          <ul class="nav-main">
+            <li class="nav-item" onclick="window.location.href='index.html'">
+              <span class="nav-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+              </span>
+              <span>Dashboard</span>
+            </li>
+            <li class="nav-item active">
+              <span class="nav-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </span>
+              <span>Schedule</span>
+            </li>
+            <li class="nav-item">
+              <span class="nav-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                  ></path>
+                  <path
+                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                  ></path>
+                </svg>
+              </span>
+              <span>Tasks</span>
+            </li>
+            <li class="nav-item">
+              <span class="nav-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </span>
+              <span>Tests</span>
+            </li>
+            <li class="nav-item">
+              <span class="nav-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </span>
+              <span>Reports</span>
+            </li>
+          </ul>
+
+          <!-- Chat & Notes Navigation -->
+          <ul class="nav-secondary">
+            <li class="nav-item">
+              <span class="nav-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                  ></path>
+                </svg>
+              </span>
+              <span>Chat</span>
+            </li>
+            <li class="nav-item">
+              <span class="nav-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  ></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </span>
+              <span>Notes</span>
+            </li>
+          </ul>
+
+          <!-- Settings & Logout Navigation (Bottom) -->
+          <ul class="nav-secondary">
+            <li class="nav-item">
+              <span class="nav-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                  ></path>
+                </svg>
+              </span>
+              <span>Settings</span>
+            </li>
+            <li class="nav-item">
+              <span class="nav-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                  <polyline points="16 17 21 12 16 7"></polyline>
+                  <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+              </span>
+              <span>Log out</span>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main">
+        <!-- Header -->
+        <header>
+          <div class="search-container">
+            <div class="search-input-wrapper">
+              <input type="text" placeholder="Search schedule..." />
+            </div>
+          </div>
+          <div class="user-info">
+            <span class="user-name">Saira Goodman</span>
+            <img src="https://i.pravatar.cc/32" alt="avatar" class="avatar" />
+            <span class="notification-icon" onclick="window.location.href='profile.html'" style="cursor: pointer;">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+            </span>
+          </div>
+        </header>
+
+        <!-- Schedule Content -->
+        <div class="schedule-layout">
+          <!-- Schedule Header -->
+          <div class="schedule-header">
+            <div class="schedule-title">
+              <h1>My Schedule</h1>
+              <p class="schedule-subtitle">Week of January 22 - 28, 2025</p>
+            </div>
+            <div class="schedule-controls">
+              <button class="schedule-nav-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button class="schedule-view-btn active">Week</button>
+              <button class="schedule-view-btn">Month</button>
+              <button class="schedule-nav-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Weekly Calendar Grid -->
+          <div class="weekly-calendar">
+            <!-- Time Column -->
+            <div class="time-column">
+              <div class="time-header"></div>
+              <div class="time-slot">8:00</div>
+              <div class="time-slot">9:00</div>
+              <div class="time-slot">10:00</div>
+              <div class="time-slot">11:00</div>
+              <div class="time-slot">12:00</div>
+              <div class="time-slot">13:00</div>
+              <div class="time-slot">14:00</div>
+              <div class="time-slot">15:00</div>
+              <div class="time-slot">16:00</div>
+              <div class="time-slot">17:00</div>
+            </div>
+
+            <!-- Monday -->
+            <div class="day-column">
+              <div class="day-header">
+                <span class="day-name">Mon</span>
+                <span class="day-date">22</span>
+              </div>
+              <div class="schedule-event" style="grid-row: 2 / 4;">
+                <div class="event-content">
+                  <div class="event-title">Computer Science Fundamentals</div>
+                  <div class="event-location">Room A-201</div>
+                  <div class="event-time">8:00 - 10:00</div>
+                </div>
+              </div>
+              <div class="schedule-event" style="grid-row: 6 / 8;">
+                <div class="event-content">
+                  <div class="event-title">Mathematics</div>
+                  <div class="event-location">Room B-105</div>
+                  <div class="event-time">12:00 - 14:00</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tuesday -->
+            <div class="day-column">
+              <div class="day-header">
+                <span class="day-name">Tue</span>
+                <span class="day-date">23</span>
+              </div>
+              <div class="schedule-event" style="grid-row: 3 / 5;">
+                <div class="event-content">
+                  <div class="event-title">Data Structures</div>
+                  <div class="event-location">Lab C-301</div>
+                  <div class="event-time">9:00 - 11:00</div>
+                </div>
+              </div>
+              <div class="schedule-event" style="grid-row: 7 / 9;">
+                <div class="event-content">
+                  <div class="event-title">Physics</div>
+                  <div class="event-location">Room D-204</div>
+                  <div class="event-time">13:00 - 15:00</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Wednesday -->
+            <div class="day-column">
+              <div class="day-header">
+                <span class="day-name">Wed</span>
+                <span class="day-date">24</span>
+              </div>
+              <div class="schedule-event" style="grid-row: 2 / 4;">
+                <div class="event-content">
+                  <div class="event-title">Algorithm Design</div>
+                  <div class="event-location">Room A-201</div>
+                  <div class="event-time">8:00 - 10:00</div>
+                </div>
+              </div>
+              <div class="schedule-event" style="grid-row: 8 / 10;">
+                <div class="event-content">
+                  <div class="event-title">English Literature</div>
+                  <div class="event-location">Room E-102</div>
+                  <div class="event-time">14:00 - 16:00</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Thursday -->
+            <div class="day-column">
+              <div class="day-header">
+                <span class="day-name">Thu</span>
+                <span class="day-date">25</span>
+              </div>
+              <div class="schedule-event" style="grid-row: 3 / 5;">
+                <div class="event-content">
+                  <div class="event-title">Database Systems</div>
+                  <div class="event-location">Lab C-302</div>
+                  <div class="event-time">9:00 - 11:00</div>
+                </div>
+              </div>
+              <div class="schedule-event" style="grid-row: 6 / 8;">
+                <div class="event-content">
+                  <div class="event-title">Statistics</div>
+                  <div class="event-location">Room B-106</div>
+                  <div class="event-time">12:00 - 14:00</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Friday -->
+            <div class="day-column">
+              <div class="day-header">
+                <span class="day-name">Fri</span>
+                <span class="day-date">26</span>
+              </div>
+              <div class="schedule-event" style="grid-row: 2 / 4;">
+                <div class="event-content">
+                  <div class="event-title">Software Engineering</div>
+                  <div class="event-location">Room A-203</div>
+                  <div class="event-time">8:00 - 10:00</div>
+                </div>
+              </div>
+              <div class="schedule-event" style="grid-row: 9 / 11;">
+                <div class="event-content">
+                  <div class="event-title">Seminar</div>
+                  <div class="event-location">Auditorium</div>
+                  <div class="event-time">15:00 - 17:00</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Saturday -->
+            <div class="day-column weekend">
+              <div class="day-header">
+                <span class="day-name">Sat</span>
+                <span class="day-date">27</span>
+              </div>
+              <div class="schedule-event" style="grid-row: 4 / 6;">
+                <div class="event-content">
+                  <div class="event-title">Study Group</div>
+                  <div class="event-location">Library</div>
+                  <div class="event-time">10:00 - 12:00</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sunday -->
+            <div class="day-column weekend">
+              <div class="day-header">
+                <span class="day-name">Sun</span>
+                <span class="day-date">28</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming Events -->
+          <div class="upcoming-events">
+            <div class="stat-card">
+              <div class="section-header">
+                <h4>Upcoming Events</h4>
+                <button class="add-task-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+              <div class="upcoming-list">
+                <div class="upcoming-item">
+                  <div class="upcoming-date">
+                    <span class="date-day">29</span>
+                    <span class="date-month">Jan</span>
+                  </div>
+                  <div class="upcoming-content">
+                    <h5>Computer Science Midterm</h5>
+                    <p class="upcoming-time">9:00 AM - 11:00 AM</p>
+                    <p class="upcoming-location">Room A-201</p>
+                  </div>
+                  <div class="upcoming-status exam">Exam</div>
+                </div>
+                <div class="upcoming-item">
+                  <div class="upcoming-date">
+                    <span class="date-day">31</span>
+                    <span class="date-month">Jan</span>
+                  </div>
+                  <div class="upcoming-content">
+                    <h5>Project Presentation</h5>
+                    <p class="upcoming-time">2:00 PM - 4:00 PM</p>
+                    <p class="upcoming-location">Room C-301</p>
+                  </div>
+                  <div class="upcoming-status presentation">Presentation</div>
+                </div>
+                <div class="upcoming-item">
+                  <div class="upcoming-date">
+                    <span class="date-day">02</span>
+                    <span class="date-month">Feb</span>
+                  </div>
+                  <div class="upcoming-content">
+                    <h5>Assignment Due</h5>
+                    <p class="upcoming-time">11:59 PM</p>
+                    <p class="upcoming-location">Online Submission</p>
+                  </div>
+                  <div class="upcoming-status assignment">Assignment</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
